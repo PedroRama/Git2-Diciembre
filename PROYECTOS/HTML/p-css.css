@@ -1,4 +1,8 @@
 
+body {
+    overflow-x: hidden; /* Oculta el scroll horizontal */
+}
+
 .sep{
     margin-left: 300px;
     margin-right: 300px;
@@ -116,7 +120,8 @@
 .p1-img {
     display: flex;
     align-items: center; 
-    width: 55%;
+    text-align: left;
+    width: 100%;
     height: 100px; 
     color: rgb(255, 255, 255);
     font-family: 'Comic Sans MS';
@@ -379,4 +384,183 @@ body::-webkit-scrollbar-thumb{
 body::-webkit-scrollbar-thumb:hover{
     background: rgb(54, 53, 53);
     border-radius: 100px;
+}
+
+
+
+
+/* ¡¡¡¡¡¡¡ VESRIÓN MÓVIL !!!!!! */
+
+/* Estilos para dispositivos móviles */
+@media (max-width: 768px) {
+    body {
+        margin: 0;
+        padding: 0;
+        overflow-x: hidden; /* Oculta el scroll horizontal */
+        width: 100vw; /* Asegura que el body ocupe todo el ancho de la ventana */
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh; /* Asegura que el body ocupe al menos el 100% de la altura de la ventana */
+    }
+
+    main {
+        flex: 1; /* Permite que el main ocupe el espacio disponible */
+    }
+
+    footer {
+        display: flex;
+        justify-content: center; /* Centra el contenido horizontalmente */
+        align-items: center; /* Centra el contenido verticalmente */
+        width: 100%; /* Asegura que el footer ocupe todo el ancho disponible */
+        padding: 10px; /* Añade padding para que el contenido no toque los bordes */
+        background-color: rgb(44, 42, 42); /* Color de fondo del footer */
+        box-sizing: border-box; /* Incluye el padding en el tamaño total del footer */
+        position: relative; /* Asegura que el footer se posicione correctamente */
+    }
+
+    .botones-footer {
+        display: flex;
+        flex-direction: row; /* Alinea los botones en fila */
+        justify-content: center; /* Centra los botones horizontalmente */
+        gap: 10px; /* Espacio entre los botones */
+        width: 100%; /* Asegura que el contenedor ocupe todo el ancho disponible */
+    }
+
+    .fondo-head1 {
+        display: flex;
+        justify-content: center; /* Centra el contenido horizontalmente */
+        gap: 10px; /* Añade 10px de separación entre las imágenes */
+        flex-wrap: nowrap; /* Asegura que los elementos no se ajusten en varias líneas */
+        overflow-x: hidden; /* Oculta el scroll horizontal */
+    }
+    
+    .fondo-head1 span {
+        display: flex; /* Asegura que los spans no afecten el diseño */
+        margin: 0; /* Elimina márgenes adicionales */
+    }
+    
+    .fondo-head1 span img {
+        display: inline-block; /* Asegura que las imágenes se comporten correctamente */
+        visibility: visible; /* Asegura que las imágenes sean visibles */
+    }
+    
+    .fondo-head1 span::after {
+        content: ''; /* Elimina cualquier texto contenido en los span */
+        display: none; /* No muestra el pseudo-elemento */
+    }
+
+    .opciones-head2 {
+        display: flex;
+        flex-direction: column; /* Alinea los elementos en columna */
+        align-items: center; /* Centra los elementos horizontalmente */
+        justify-content: center; /* Centra los elementos verticalmente */
+        gap: 10px; /* Espacio entre los elementos */
+        margin: 0; /* Elimina márgenes adicionales */
+        width: 100%;
+        height: 100%; /* Asegura que el contenedor ocupe toda la altura necesaria */
+    }
+    
+    .opciones-head2 .button,
+    .opciones-head2 .button_Ini {
+        width: auto; /* Ajusta el ancho según el contenido */
+        text-align: center; /* Centra el texto dentro del botón */
+        padding: 10px; /* Añade padding para que el botón tenga espacio interno */
+        box-sizing: border-box; /* Incluye el padding en el tamaño total del botón */
+        margin: 0 auto; /* Centra el botón horizontalmente */
+    }
+
+    .opciones-head2 .button:last-child, /* Si el botón es el último */
+    .opciones-head2 .button.special { /* Si el botón tiene una clase específica */
+        margin: 0 auto !important; /* Fuerza la alineación al centro */
+    }
+
+    .img-back {
+        display: flex;
+        justify-content: center; /* Centra la imagen horizontalmente */
+        align-items: center; /* Centra la imagen verticalmente */
+        width: 100%; /* Ajusta el ancho al 100% del contenedor */
+        height: auto; /* Ajusta la altura automáticamente para mantener la proporción */
+        overflow: hidden; /* Oculta cualquier contenido que se desborde */
+        margin: 0; /* Elimina márgenes adicionales */
+    }
+
+    .img-back img {
+        width: 400%; /* Ajusta el ancho de la imagen al 150% del contenedor */
+        height: auto; /* Ajusta la altura automáticamente para mantener la proporción */
+        object-fit: cover; /* Recorta la imagen para que se ajuste al contenedor */
+    }
+
+    .p1-img {
+        width: 100%; /* Ajusta el ancho para dispositivos móviles */
+        font-size: 24px; /* Ajusta el tamaño de la fuente para dispositivos móviles */
+        transform: translateY(160px); /* Ajusta la posición vertical para dispositivos móviles */
+        padding: 0 10px; /* Añade padding para que el contenido no toque los bordes */
+        box-sizing: border-box; /* Incluye el padding en el tamaño total del elemento */
+        text-align: left;
+    }
+
+    .bienvenido, .come {
+        text-align: center; /* Centra el texto para dispositivos móviles */
+        font-size: 20px; /* Ajusta el tamaño de la fuente para dispositivos móviles */
+        transform: translateY(160px); /* Ajusta la posición vertical para dispositivos móviles */
+        padding: 0 10px; /* Añade padding para que el contenido no toque los bordes */
+        box-sizing: border-box; /* Incluye el padding en el tamaño total del elemento */
+        text-align: left;
+        font-weight: bold;
+    }
+
+    .naranja-recuadro{
+        text-align: center; /* Centra el texto para dispositivos móviles */
+        transform: translateY(160px); /* Ajusta la posición vertical para dispositivos móviles */
+    }
+
+    .redes-sociales{
+        text-align: left; /* Centra el texto para dispositivos móviles */
+        transform: translateY(160px); /* Ajusta la posición vertical para dispositivos móviles */
+    }
+
+    .redes-sociales img {
+        width: 40px; /* Ajusta el ancho de los iconos */
+        height: 40px; /* Ajusta la altura de los iconos */
+        margin: 0 5px; /* Añade margen horizontal entre los iconos */
+    }
+
+    .sep {
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+    
+    .span-container {
+        display: flex;
+        flex-direction: column; /* Alinea los elementos en columna */
+        gap: 10px; /* Espacio entre los elementos */
+    }
+
+    .sit-tercerDiv {
+        display: flex;
+        flex-direction: column; /* Alinea los elementos en columna */
+        align-items: center; /* Centra los elementos horizontalmente */
+        gap: 10px; /* Espacio entre los elementos */
+        width: 100%; /* Asegura que el contenedor ocupe todo el ancho disponible */
+    }
+
+    .img-tercerDiv {
+        width: 100%; /* Ajusta el ancho de la imagen al 100% del contenedor */
+        height: auto; /* Mantiene la proporción de la imagen */
+        overflow: hidden; /* Oculta cualquier contenido que se desborde */
+        margin: 0; /* Elimina márgenes adicionales */
+    }
+
+    .img-tercerDiv img {
+        width: 100%; /* Ajusta el ancho de la imagen al 100% del contenedor */
+        height: auto; /* Ajusta la altura automáticamente para mantener la proporción */
+        object-fit: cover; /* Recorta la imagen para que se ajuste al contenedor */
+    }
+
+    .txt-tercerDiv {
+        width: 100%; /* Asegura que el texto ocupe todo el ancho disponible */
+        text-align: center; /* Centra el texto */
+        padding: 0 10px; /* Añade padding para que el contenido no toque los bordes */
+        box-sizing: border-box; /* Incluye el padding en el tamaño total del elemento */
+    }
 }
