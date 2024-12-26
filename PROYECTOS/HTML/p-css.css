@@ -46,11 +46,13 @@
 }
 
 .opciones-head2 .logo {
-    margin-right: auto; 
+    margin-right: auto;  
 }
 
 .opciones-head2 .logo img {
-    margin-top: 15px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+
     height: 30px; 
 }
 
@@ -60,8 +62,9 @@
     color: inherit; /* Hereda el color del texto */
     font: inherit; /* Hereda la fuente */
     cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
-    margin-top: 20px; /* Margen en la parte superior */
+    margin-top: 20px; 
     margin-right: 20px; /* Margen entre cada botón */
+    margin-bottom: 20px;
     display: flex;
     align-items: center;
     color: rgb(255, 81, 0);
@@ -73,8 +76,9 @@
     color: inherit; /* Hereda el color del texto */
     font: inherit; /* Hereda la fuente */
     cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
-    margin-top: 20px; /* Margen en la parte superior */
-    margin-right: 10px; /* Margen entre cada botón */
+    margin-top: 20px; 
+    margin-right: 20px; /* Margen entre cada botón */
+    margin-bottom: 20px;
     display: flex;
     align-items: center;
 }
@@ -89,7 +93,179 @@
 
 
 
+/*  MAIN */
 
+/*  PRIMER Div */
+
+.img-back{
+    position: absolute;
+    width: 100%;
+    z-index: -1;
+}
+
+.p1-img {
+    display: flex;
+    align-items: center; 
+    width: 55%;
+    height: 100px; 
+    color: rgb(255, 255, 255);
+    font-family: 'Comic Sans MS';
+    font-size: 40px; 
+    position: relative; 
+    z-index: 1; 
+    transform: translateY(380px);
+}
+
+.p1-img p {
+    margin: 0; /* Elimina el margen para asegurar que esté correctamente centrado */
+}
+
+.bienvenido {
+    align-items: center;
+    font-family: Arial;
+    color: rgb(255, 81, 0);
+    text-align: left;
+    font-size: 30px;
+    transform: translateY(380px);
+}
+
+.come{
+    align-items: center;
+    font-family: Arial;
+    color: rgb(255, 255, 255);
+    text-align: left;
+    font-size: 30px;
+    margin-top: 25px;
+    transform: translateY(380px);
+}
+
+.naranja-recuadro {
+    width: 250px; 
+    height: 75px; 
+    background-color:rgb(255, 81, 0); 
+    border: 2px solid rgb(255, 81, 0); 
+    transition: background-color 0.3s ease;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Arial;
+    color: rgb(255, 255, 255);
+    text-align: center;
+    font-size: 25px;
+    margin-top: 25px;
+    transform: translateY(380px)
+}
+
+.naranja-recuadro:hover {
+    background-color: transparent; /* Fondo transparente al pasar el ratón */
+    border: 2px solid rgb(255, 81, 0); /* Mantiene los bordes naranjas */
+    color: rgb(255, 81, 0);
+}
+
+.redes-sociales{
+    transform: translateY(380px);
+    margin-top: 25px;
+}
+
+.redes-sociales img {
+    width: 70px;
+    margin-right: 20px;
+}
+
+
+/*  SEGUNDO Div */
+
+.sit{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Arial;
+    text-align: center;
+    font-size: 30px;
+    margin-top: 750px;
+}
+
+.sit2.sep{
+    font-family: Arial;
+    text-align: center;
+    font-size: 30px;
+}
+
+
+.txt{
+    font-family: Comic Sans MS;
+    text-align: center;
+}
+
+.span-container {
+    display: flex;
+    justify-content: flex-start; /* Alinea los elementos al inicio del contenedor */
+    align-items: flex-start; /* Alinea los elementos al inicio del contenedor verticalmente */
+    font-family: Arial;
+    gap: 25px; /* Espacio entre los span */
+    margin-top: 20px; /* Añade un margen superior para separar del div anterior */
+}
+
+.color-text{
+    color: rgb(112, 109, 107);
+}
+
+.span-container .button {
+    background: none;
+    border: none;
+    color: inherit; /* Hereda el color del texto */
+    font: inherit; /* Hereda la fuente */
+    cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
+    margin-top: 10px; 
+    margin-right: 10px; /* Margen entre cada botón */
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+}
+
+
+.span-container .button:hover {
+    color: rgb(255, 81, 0);
+}
+
+
+
+/*  FOOTER */
+
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: rgb(44, 42, 42); /* Color gris */
+    z-index: 1000; /* Asegura que el footer esté por encima de otros elementos */
+    height: 30px; /* Ajusta la altura del footer según sea necesario */
+}
+
+.gray-rectangle-footer {
+    height: 30px; /* Ajusta la altura según sea necesario */
+}
+
+.botones-footer {
+    display: flex;
+    justify-content: center; /* Centra los botones horizontalmente */
+    align-items: center; /* Alinea los botones verticalmente */
+    gap: 10px; /* Espacio entre los botones */
+}
+
+.botones-footer .button {
+    background: none;
+    border: none;
+    color: inherit; /* Hereda el color del texto */
+    font-family: Arial; /* Usa la fuente Arial */
+    cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
+    margin: 0; /* Elimina márgenes adicionales */
+    padding: 0; /* Elimina relleno adicional */
+}
+
+.botones-footer .button:hover {
+    color: rgb(255, 81, 0); /* Cambia a color naranja al pasar el ratón */
+}
 
 
 
