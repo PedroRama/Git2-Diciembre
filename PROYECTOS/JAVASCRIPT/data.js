@@ -12,7 +12,7 @@ const product = [
       precio: 2.5, stock: 75
     },
     {
-      id: 4, nombre: "VELCRO", img:"IMÁGENES/velcro.png", descripción:"Tiras de velcro solo con la parte suave. Inútil para unir nada, pero suave al tacto." ,
+      id: 4, nombre: "VELCRO QUE NO PEGA", img:"IMÁGENES/velcro.png", descripción:"Tiras de velcro solo con la parte suave. Inútil para unir nada, pero suave al tacto." ,
       precio: 4, stock: 60
     },
     {
