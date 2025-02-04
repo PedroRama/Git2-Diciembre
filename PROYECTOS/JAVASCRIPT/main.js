@@ -19,7 +19,7 @@ document.addEventListener("DOMContentLoaded", () => { //ESTO LO USAMOS PARA QUE 
         // aquí creamos el div con la imagen, descripción y precio del producto
         productDiv.innerHTML = ` 
             <p><h3>${item.nombre}</h3></p>
-            <img src="${item.img}" alt="${item.nombre}" style="width:350px;height:300px;">
+            <img src="${item.img}" alt="${item.nombre}" style="width:350px;height:300px;border-radius: 20%;">
             <p>${item.descripción}</p>
             <p style="font-size: 18px;"><b>Precio: ${item.precio}€</b></p>
             <button class="boton-añadirCarrito">AGREGAR AL CARRITO</button>
@@ -68,6 +68,11 @@ document.addEventListener("DOMContentLoaded", () => { //ESTO LO USAMOS PARA QUE 
 
 function añadirAlCarrito(item) {
     if (item.stock > 0) {
+
+        // Cambiar el fondo del boton de cesta a verde
+        const cesta = document.getElementById("verCesta");
+        cesta.style.backgroundColor = "green";
+
         const cestaLista = document.getElementById("cesta-lista");
         const listItem = document.createElement('li');
         listItem.textContent = `${item.nombre} ${item.precio}€`;
@@ -81,19 +86,14 @@ function añadirAlCarrito(item) {
         item.stock -= 1;
         document.getElementById(`stock-${item.nombre}`).textContent = item.stock;
 
-        // Cambiar el fondo del boton de cesta a verde
-        const cesta = document.getElementById("verCesta");
-        cesta.style.backgroundColor = "green";
-
         // Mostrar alerta si el stock es 0
         if (item.stock === 0) {
             alert("No hay más stock de este producto");
         }
-        } else {
+    } else{
         alert("No hay más stock de este producto");
-        }
+    }
 }
-
 
 function vaciarCesta() {
 
