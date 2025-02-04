@@ -90,6 +90,7 @@ function añadirAlCarrito(item) {
         if (item.stock === 0) {
             alert("No hay más stock de este producto");
         }
+        
     } else{
         alert("No hay más stock de este producto");
     }
