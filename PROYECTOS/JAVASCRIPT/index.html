@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="data.js"></script>
+    <script src="main.js"></script>
+    <title>L.I.P</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="nombreTienda"><h3>LO INNCESARIO DE PETER</h3></div>
+        <div class="header-center">
+            <a href="#" id="inicio" style="font-size: 18px;"><b>Inicio</b></a>
+            <a href="#" style="font-size: 18px;"><b>Productos</b></a>
+            <a href="#" id="blog" style="font-size: 18px;"><b>Blog</b></a>
+            <a href="#" id="contacto" style="font-size: 18px;"><b>Contacto</b></a> 
+        </div>
+        <button class="botonCesta header-right" id="verCesta"><h3>CESTA</h3></button> 
+    </header>
+
+    <main>
+        <div class="align-product" id="product-container">
+            <!--AQUÍ RELLENAMOS CON EL CONTENIDO A TRAVÉS DE JAVASCRIPT-->
+        </div>
+    </main>
+
+    <footer>
+        <p>GRACIAS POR COMPRAR AQUÍ</p>
+    </footer>
+
+    <div class="cesta cesta-oculta" id="cesta"> 
+        <button id="salirCesta" class="botonSalirCesta" >Volver</button>
+        <h2>CESTA</h2>
+        <p>Total: <span id="total">0</span>€</p>
+        <ul id="cesta-lista"></ul>
+        <button id="comprar" class="botonComprar" >COMPRAR</button>
+        <button id="vaciarCesta" class="botonVaciarCesta" >Vaciar Cesta</button>
+    </div>
+    
+</body>
+</html>

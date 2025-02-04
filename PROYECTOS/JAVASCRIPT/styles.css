@@ -1,0 +1,240 @@
+body {
+    font-family: Arial;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: rgb(255, 247, 247);
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333;
+    color: white;
+    padding: 10px 20px;
+}
+
+.header-center a {
+    color: white;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    margin: 0 15px;
+}
+
+.header-center a:hover {
+    text-decoration: underline;
+}
+
+.nombreTienda{
+    background: linear-gradient(45deg, #ff416c, #ff4b2b);
+    -webkit-background-clip: text; /* Aplicamos el fondo solo al texto */
+    -webkit-text-fill-color: transparent; /* Hace que el texto sea transparente pero con el gradiente */
+    font-weight: bold; /* Con esto mejoramos la visibilidad */
+    font-family: Arial Black;
+}
+
+
+main {
+    flex: 1;
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    margin-right: 25%;
+    margin-left: 25%;
+}
+
+.boton-añadirCarrito {
+    background-color: #ffffff;
+    color: #000000; 
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 12px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.boton-añadirCarrito:hover {
+    background-color: #f0f0f0; /* Fondo ligeramente gris al pasar el ratón */
+    color: #000000; /* Letras negras */
+}
+
+.product {
+    background-color: #e0e0e0;
+    border: 1px solid #ddd; 
+    padding: 20px; 
+    width: calc(45% - 20px); 
+    text-align: center;
+    box-sizing: border-box; 
+    margin: 20px;
+    border-radius: 10%;
+}
+
+.align-product {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between; /* Asegura que los productos se distribuyan uniformemente */
+    align-items: flex-start; /* Alinea los productos al inicio del contenedor */
+    margin-left: 10%; /* Reduce el margen izquierdo para dar más espacio a los productos */
+    margin-right: 10%; /* Reduce el margen derecho para dar más espacio a los productos */
+}
+
+.align-product > div { 
+    margin: 20px; /* Aumentamos el margen para dar más espacio entre los productos */
+    text-align: center;
+}
+
+.boton-añadirCarrito {
+    background-color: #363333;
+    color: rgb(255, 255, 255);
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 30px;
+}
+
+.botonCesta {
+    background-color: #363333;
+    color: rgb(255, 255, 255);
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 30px;
+    width: 200px; /* Ajusta el ancho según tus necesidades */
+    display: block; /* Aseguramos que el botón se comporte como un bloque */
+}
+
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 1px 0;
+}
+
+
+/* Estilos para la pestaña de la cesta */
+.cesta {
+    position: fixed;
+    right: 0;
+    top: 0;
+    width: 300px;
+    height: 100%;
+    background-color: #f9f9f9;
+    box-shadow: -2px 0 5px rgba(0,0,0,0.5);
+    padding: 20px;
+    overflow-y: auto;
+    display: none; /* Oculto por defecto */
+}
+
+.cesta h2 {
+    text-align: center;
+}
+
+.cesta-visible {
+    display: block; /* Mostramos cuando sea visible */
+}
+
+.cesta-oculta {
+    display: none; /* Ocultamos cuando no sea visible */
+}
+
+.botonSalirCesta {
+    background-color: #363333;
+    color: rgb(255, 255, 255);
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 30px;
+    display: block; /* Nos aseguramos de que el botón sea un bloque */
+    margin: 20px auto; /* Centramos el botón horizontalmente */
+    text-align: center; /* Centramos el texto dentro del botón */
+    font-size: 20px;
+}
+.botonSalirCesta:hover {
+    background-color: #cec7c7;
+    color: Black;
+}
+
+.botonVaciarCesta {
+    background-color: #363333;
+    color: rgb(255, 255, 255);
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 30px;
+    display: block; 
+    margin: 20px auto; 
+    text-align: center;
+    position: absolute; 
+    bottom: 20px; 
+    left: 50%;
+    transform: translateX(-50%);
+    margin-bottom: 50px;
+}
+.botonVaciarCesta:hover {
+    background-color: #cec7c7;
+    color: Black;
+}
+
+
+.botonComprar {
+    background-color: #363333;
+    color: rgb(255, 255, 255);
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 30px;
+    display: block; 
+    margin: 20px auto; 
+    text-align: center;
+    position: absolute; 
+    bottom: 120px; /* Aumentamos el bottom para que esté más arriba */
+    left: 50%;
+    transform: translateX(-50%);
+    width: 200px; 
+}
+.botonComprar:hover {
+    background-color: green; 
+    transform: translateX(-50%) scale(1.3); /* Agrandamos el botón */
+}
+
+
+
+
+
+
+/* Ancho de la barra de desplazamiento */
+::-webkit-scrollbar {
+    width: 12px;
+}
+
+/* Fondo de la barra de desplazamiento */
+::-webkit-scrollbar-track {
+    background: #1e1e1e; /* Color oscuro de fondo */
+    border-radius: 10px;
+}
+
+/* Estilo del "pulgar" (la parte que se mueve) */
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(45deg, #ff416c, #ff4b2b); /* Degradado llamativo */
+    border-radius: 10px;
+}
+
+/* Efecto hover en el pulgar */
+::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(45deg, #ff4b2b, #ff416c); /* Invertimos colores en hover */
+}
+
+/* Scrollbar horizontal (si lo necesitas) */
+::-webkit-scrollbar:horizontal {
+    height: 8px;
+}
+
+::-webkit-scrollbar-thumb:horizontal {
+    background: linear-gradient(45deg, #4facfe, #00f2fe);
+}
